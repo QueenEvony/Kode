@@ -1,0 +1,17 @@
+{%extends "index/index.html"%}
+
+{%block body %}
+ <h2 class="text-3xl mb-6 tm-text-green">Admin Sign In</h2>
+        <form method="" class="text-lg">
+            <!--login admin user--> 
+               {% csrf_token %}
+               {{form.as_p}}
+               <br/>
+                <button type="submit" class="inline-block text-white text-2xl pl-10 pr-12 py-6 rounded-lg transition tm-bg-green">Sign In</button>
+          </form>  
+              <br/>  
+              <p class="text-black leading-8 text-sm font-bold">
+                If you don't have an account, please, <a  rel="nofollow" href="{%url 'index:index' %}" target="_parent">Sign Up</a>. </p>
+        </div>            
+          </form>  
+{%endblock body%}
